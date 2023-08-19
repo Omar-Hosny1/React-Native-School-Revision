@@ -10,13 +10,16 @@ import {
 
 function GoalInput(props) {
   const [enteredGoalText, setEnteredGoalText] = useState("");
+
   const goalInputHandler = (text) => {
     setEnteredGoalText(text);
   };
+
   const addGoalHandler = () => {
     props.onAddGoal(enteredGoalText);
     setEnteredGoalText("");
   };
+
   return (
     <Modal visible={props.visible} animationType="slide" style={styles.modal}>
       <View style={styles.inputContainer}>
